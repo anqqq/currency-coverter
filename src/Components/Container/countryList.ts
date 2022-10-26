@@ -28,7 +28,7 @@ export const countryList: countryListT = {
   BSD: "BS",
   NOK: "BV",
   BWP: "BW",
-  BYR: "BY",
+  BYN: "BY",
   BZD: "BZ",
   CAD: "CA",
   CDF: "CD",
