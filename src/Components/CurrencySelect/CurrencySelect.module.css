@@ -5,6 +5,7 @@
   padding: 5px;
   border: 1px solid #999999;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .select_wrapper img {
@@ -14,5 +15,5 @@
 }
 
 .select_wrapper select {
-  width: auto;
+  width: 65%;
 }

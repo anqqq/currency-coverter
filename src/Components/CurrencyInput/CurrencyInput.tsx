@@ -2,18 +2,43 @@ import React from "react";
 import { CurrencySelect } from "../CurrencySelect/CurrencySelect";
 import styles from "./CurrencyInput.module.css";
 
-interface CurrencyInputI {
-  label: string;
-}
+type CurrencyInputT = {
+  labelCurrency: string;
+  state: {
+    currency: string;
+    image: string;
+    amount: number;
+  };
+  handleChange: (items: {
+    currency: string;
+    image: string;
+    amount: number;
+  }) => void;
+};
 
-export const CurrencyInput = ({ label }: CurrencyInputI) => {
+export const CurrencyInput = ({
+  labelCurrency,
+  state,
+  handleChange,
+}: CurrencyInputT) => {
   return (
-    <div>
-      <p className={styles.label}>{label}</p>
-      <div className={styles.inputs}>
-        <CurrencySelect />
-        <input className={styles.input} type="text" />
-      </div>
+    <div className={styles.inputs}>
+      <p className={styles.label}>{labelCurrency}</p>
+      <CurrencySelect state={state} handleChange={handleChange} />
+      <p className={styles.label}>
+        {labelCurrency === "From" ? "Enter amount" : "You'll get"}
+      </p>
+      <input
+        className={styles.input}
+        type="text"
+        value={state.amount}
+        onChange={(e) =>
+          handleChange({
+            ...state,
+            amount: +e.target.value.replace(/\D/g, ""),
+          })
+        }
+      />
     </div>
   );
 };

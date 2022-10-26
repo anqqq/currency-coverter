@@ -1,12 +1,13 @@
-.label {
-  font-size: 16pt;
-  margin: 0;
-}
-
 .inputs {
   display: flex;
-  justify-content: flex-start;
-  gap: 15px;
+  flex-direction: column;
+  margin: 0;
+  width: 30%;
+}
+
+.label {
+  font-size: 16pt;
+  margin-bottom: 5px;
 }
 
 .inputs input,
@@ -19,10 +20,10 @@ select {
   background-color: whitesmoke;
 }
 
-.input {
+.inputs input {
   border: 1px solid #999999;
 }
 
-.input:focus {
+input:focus {
   border: 1px solid #675aff;
 }
