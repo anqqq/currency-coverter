@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/currency-coverter/static/css/main.e11527e5.css",
+    "main.js": "/currency-coverter/static/js/main.cac5b87d.js",
+    "index.html": "/currency-coverter/index.html",
+    "main.e11527e5.css.map": "/currency-coverter/static/css/main.e11527e5.css.map",
+    "main.cac5b87d.js.map": "/currency-coverter/static/js/main.cac5b87d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e11527e5.css",
+    "static/js/main.cac5b87d.js"
+  ]
+}
